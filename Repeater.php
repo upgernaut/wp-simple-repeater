@@ -81,7 +81,7 @@ class CustomMetaBox {
             <tfoot>
                 <tr>
                     <td colspan="4">
-                        <button class="repeater-add-item button button-secondary" type="button"><?php esc_html_e('Add another', 'repeater-meta-box'); ?></button>
+                        <button class="<?php echo $this->metaBoxId ?>_repeater-add-item button button-secondary" type="button"><?php esc_html_e('Add another', 'repeater-meta-box'); ?></button>
                     </td>
                 </tr>
             </tfoot>
@@ -116,7 +116,7 @@ class CustomMetaBox {
                 jQuery(document).on('click', '.repeater-remove-item', function() {
                     jQuery(this).parents('tr.repeater-sub-row').remove();
                 }); 				
-                jQuery(document).on('click', '.repeater-add-item', function() {
+                jQuery(document).on('click', '.<?php echo $this->metaBoxId ?>_repeater-add-item', function() {
                     var p_this = jQuery(this);    
                     var row_no = parseFloat(jQuery('.repeater-item-table tr.repeater-sub-row').length);
                     var row_html = jQuery('.repeater-item-table .repeater-hide-tr').html().replace(/rand_no/g, row_no).replace(/hide_<?php echo $this->metaBoxRepeaterItemName ?>_item/g, '<?php echo $this->metaBoxRepeaterItemName ?>_item');
