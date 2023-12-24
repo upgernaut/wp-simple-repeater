@@ -51,6 +51,7 @@ class CustomMetaBox {
                         <?php
                     }
                 } else {
+                    /* 
                     ?>
                     <tr class="repeater-sub-row">                
                         <td>
@@ -64,6 +65,7 @@ class CustomMetaBox {
                         </td>
                     </tr>
                     <?php
+                    */
                 }
                 ?>			
                 <tr class="repeater-hide-tr">				
